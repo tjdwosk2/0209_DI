@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+			
+			<!-- 무조건 만들어줄 떄 bean 써주고 id 와 클래스 지정해주자  -->
+		<bean id="mp1" class="com.ict.ex03_DI.MyProcess"></bean>
+		
+		
+		<bean id="mp2" class="com.ict.ex03_DI.MyProcess">
+			<constructor-arg name="name" value="마이콜"></constructor-arg>
+			<constructor-arg name="age" value="72"></constructor-arg>
+		</bean>
+		
+		<!-- <bean id="mp3" class="com.ict.ex03_DI.MyProcess">
+			<constructor-arg name="name"><value>일지매</value></constructor-arg>
+			<constructor-arg name="age"><value>15</value></constructor-arg>
+		</bean> -->
+		
+		<bean id="mp3" class="com.ict.ex03_DI.MyProcess">
+		<!--setter => property  -->
+			<property name="name" value="임꺽정"></property>
+			<property name="age" value="15"></property>
+			
+		</bean>
+		
+
+</beans>

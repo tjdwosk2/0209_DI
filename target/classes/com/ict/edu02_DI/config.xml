@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 객체 생성 -->
+	<!-- id 이름 calss 클래스지칭  -->
+	<!-- OracleDAO od = new OracleDAO() 와 같다  -->
+	<bean id ="od" class ="com.ict.edu02_DI.OracleDAO"></bean>
+	
+	<bean id ="md" class = "com.ict.edu02_DI.MySQLDAO"></bean>
+	
+	<bean id="service" class="com.ict.edu02_DI.Service">
+        <!-- 생성자를 이용하기 -->
+      <!--   <constructor-arg ref="md" /> -->
+      
+      	<!-- setter 를 이용하기 -->
+      	<property name="dao" ref="md"/>
+    </bean> 
+	
+	
+	
+	
+</beans>
